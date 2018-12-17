@@ -38,6 +38,7 @@ func (self *MoviesController) Get() {
 		row["id"] = v.Id
 		row["nickname"] = v.Nickname
 		row["content"] = v.Content
+		row["created_at"] = v.Created_at
 		list[k] = row
 	}
 	self.Data["Comments"] = list

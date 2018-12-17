@@ -8,7 +8,8 @@ type Comments struct {
 	Id          	int    
 	Movie_id      	int
 	Nickname		string 
-	Content    		string 
+	Content    		string
+	Created_at		string 
 }
 
 func (a *Comments) TableName() string {

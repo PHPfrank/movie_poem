@@ -6,16 +6,21 @@ import (
 )
 
 func init() {
+	
+	//自定义路由
+	beego.Router("/", &controllers.MainController{},"*:Get")
 	//首页
-	beego.Router("/", &controllers.MainController{})
 	beego.Router("/index", &controllers.MainController{})
 	//电影详情
 	beego.Router("/detail",&controllers.MoviesController{})
-	//提交评论
-	beego.Router("/addComment",&controllers.CommentsController{})
+	//心诗
+	beego.Router("/poems",&controllers.PoemsController{})
 	//微语
-	beego.Router("/about",&controllers.AboutController{})
+	beego.Router("/words",&controllers.WordsController{})
 	//关于我
-	beego.Router("/about",&controllers.AboutController{})
+	beego.Router("/about",&controllers.AboutController{})	
+	//提交评论
+	//提交评论
+	beego.Router("/post_comment",&controllers.CommentsController{},"*:PostComment")
 
 }
