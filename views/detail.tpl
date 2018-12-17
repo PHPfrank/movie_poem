@@ -24,15 +24,15 @@
       </a>
     </h1>
     <div class="nav">
-      <a href="index.html" class="active">电影资讯</a>
-      <a href="leacots.html">微语</a>
-      <a href="album.html">相册</a>
+      <a href="index.html"class="active">电影资讯</a>
+      <a href="poems.html">心诗</a>
+      <a href="words.html">微语</a>
       <a href="about.html">about me</a>
     </div>
     <ul class="layui-nav header-down-nav">
       <li class="layui-nav-item"><a href="index.html" class="active">电影资讯</a></li>
-      <li class="layui-nav-item"><a href="leacots.html">微语</a></li>
-      <li class="layui-nav-item"><a href="album.html">相册</a></li>
+      <li class="layui-nav-item"><a href="poems.html" >心诗</a></li>
+      <li class="layui-nav-item"><a href="words.html">微语</a></li>
       <li class="layui-nav-item"><a href="about.html">about me</a></li>
     </ul>
     <p class="welcome-text">
@@ -72,7 +72,7 @@
                     <img src="../static/res/img/header.png" alt="">
                   </div>
                   <div class="text">
-                    <p class="tit"><span class="name">{{$elem.nickname}}</span><span class="data">2018/06/06</span></p>
+                    <p class="tit"><span class="name">{{$elem.nickname}}</span><span class="data">{{$elem.created_at}}</span></p>
                     <p class="ct">{{$elem.content}}</p>
                   </div>
                 </div>
@@ -154,7 +154,7 @@
       var $ = layui.jquery;
       form.on('submit(formDemo)', function(data){
         $.ajax({
-                url:'addComment',
+                url:'post_comment',
                 method:'post',
                 data:data.field,
                 dataType:'JSON',
