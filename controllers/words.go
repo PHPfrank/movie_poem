@@ -1,10 +1,7 @@
 package controllers
 
 import (
-	//"github.com/astaxie/beego"
 	"blog/models"
-	//"strconv"
-	//"fmt"
 )
 
 type WordsController struct {
@@ -33,6 +30,7 @@ func (self *WordsController) Get() {
 		row["img_author"] = v.Img_author
 		list[k] = row
 	}
+	//返回数据
 	self.Data["Words"] = list
 	self.Data["Count"] = count
 	self.TplName = "words.tpl"

@@ -1,10 +1,7 @@
 package controllers
 
 import (
-	//"github.com/astaxie/beego"
 	"blog/models"
-	//"strconv"
-	//"fmt"
 )
 
 type PoemsController struct {
@@ -33,6 +30,7 @@ func (self *PoemsController) Get() {
 		row["popularity"] = v.Popularity
 		list[k] = row
 	}
+	//返回数据
 	self.Data["Poems"] = list
 	self.Data["Count"] = count
 	self.TplName = "poem.tpl"

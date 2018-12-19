@@ -10,5 +10,4 @@ type AboutController struct {
 
 func (self *AboutController) Get() {
 	self.TplName = "about.tpl"
-
 }
